@@ -25,14 +25,14 @@ class DisjoinSet:
     def unionBySize(self,u,v):
         pu = self.findParent(u)
         pv = self.findParent(v)
-        if pu == pv:
-            return
-        if self.size[pu] > self.size[pu]:
+        if pu==pv:
+            return 
+        if self.size[pu]>self.size[pv]:
             self.parent[pv] = pu
             self.size[pu]+=self.size[pv]
         else:
             self.parent[pu] = pv
-            self.rank[pv]+=self.size[pu]
+            self.size[pv]+=self.size[pu]
 
 
 obj = DisjoinSet(7)

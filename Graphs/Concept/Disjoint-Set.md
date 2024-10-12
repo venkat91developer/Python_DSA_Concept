@@ -7,7 +7,7 @@ Key Features
 Efficiency: Disjoint-set structures are optimized for efficiency, especially with techniques like path compression (to make the find operation faster) and union by rank (to keep trees flat during union operations).
 Applications: They are widely used in algorithms like Kruskal's for minimum spanning trees, network connectivity problems, and clustering.
 
-==Time Complexity: O(4 alpha) ~ => O(1)==
+== Time Complexity: O(4 alpha) ~ => O(1) ==
 
 ```py
 class DisjoinSet:
@@ -37,12 +37,12 @@ class DisjoinSet:
     def unionBySize(self,u,v):
         pu = self.findParent(u)
         pv = self.findParent(v)
-        if pu == pv:
-            return
-        if self.size[pu] > self.size[pu]:
+        if pu==pv:
+            return 
+        if self.size[pu]>self.size[pv]:
             self.parent[pv] = pu
             self.size[pu]+=self.size[pv]
         else:
             self.parent[pu] = pv
-            self.rank[pv]+=self.size[pu]
+            self.size[pv]+=self.size[pu]
 ```
