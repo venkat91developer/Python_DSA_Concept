@@ -37,7 +37,10 @@ class DP1:
             prev1 = prev0
             prev0 = curr
         return prev0
-
+    '''
+    Time  Complexity: O(n)
+    Space Complexity: O(1)
+    '''
 
         
 #FIBONNIC SERIES:
