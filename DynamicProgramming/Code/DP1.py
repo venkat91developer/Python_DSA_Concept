@@ -29,6 +29,7 @@ class DP1:
         Time  Complexity: O(n)
         Space Complexity: O(n)
         '''
+    #TABULATION METHOD - SPACE OPTIMAL METHOD
     def fibTabOptimial(self,n):
         prev0 = 0
         prev1 = 1
@@ -37,10 +38,10 @@ class DP1:
             prev1 = prev0
             prev0 = curr
         return prev0
-    '''
-    Time  Complexity: O(n)
-    Space Complexity: O(1)
-    '''
+        '''
+        Time  Complexity: O(n)
+        Space Complexity: O(1)
+        '''
 
         
 #FIBONNIC SERIES:
