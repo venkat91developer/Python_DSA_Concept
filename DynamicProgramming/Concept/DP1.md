@@ -19,3 +19,33 @@ Start with the original problem, break it down, and store the solutions to subpr
 Solve all possible subproblems first, storing each result in a table or array, and use these to solve the larger problem.
 
 Common applications of DP include problems involving optimization, like **finding the longest subsequence, shortest path, or maximum sum in a sequence.** DP is widely used in combinatorial problems and optimization tasks.
+
+To convert a recursive Fibonacci solution to use memoization (dynamic programming), you can follow these steps:
+
+### Steps to Convert Recursive Fibonacci to Memoized DP
+
+1. **Write the Basic Recursive Function**:
+   ```py
+   def fib(n):
+       if n <= 1:
+           return n
+       return fib(n-1) + fib(n-2)
+   ```
+
+Here's the updated code with memoization:
+
+```py
+    dp = [-1] * n
+    def fib(n):
+        if n <= 1:
+            return n
+        if dp[n]==-1:
+            dp[n] = fib(n-1) + fib(n-2)
+        return dp[n]
+```
+
+### Explanation
+**Step 1:** Declare DP Array with -1.
+**Step 2:** Check DP[n] should be -1 then call recursive.
+**Step 3:** If not -1 then return stored value.
+
