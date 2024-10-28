@@ -25,12 +25,12 @@ To convert a recursive Fibonacci solution to use memoization (dynamic programmin
 ### Steps to Convert Recursive Fibonacci to Memoized DP
 
 1. **Write the Basic Recursive Function**:
-   ```py
-   def fib(n):
-       if n <= 1:
-           return n
-       return fib(n-1) + fib(n-2)
-   ```
+```py
+    def fib(n):
+        if n <= 1:
+            return n
+        return fib(n-1) + fib(n-2)
+```
 
 Here's the updated code with memoization:
 
@@ -45,7 +45,21 @@ Here's the updated code with memoization:
 ```
 
 ### Explanation
-**Step 1:** Declare DP Array with -1.
-**Step 2:** Check DP[n] should be -1 then call recursive.
-**Step 3:** If not -1 then return stored value.
+- **Step 1:** Declare DP Array with -1.
+- **Step 2:** Check DP[n] should be -1 then call recursive.
+- **Step 3:** If not -1 then return stored value.
 
+### Understand when we use DP: [Question Says that,below things]
+    1. Count the Total number of Ways[Total Ways or Best Ways].
+        - Try all possible ways 
+            1. Count the All Ways
+            2. Best Way
+    2.Which is gives a min or max output.
+
+### Shortcut to Solve DP Problems
+    1. Try to represent the problem in terms of Index
+    2. Do all possible stuffs on that index, according to the Problem Statement.
+    3. If Question says, 
+        - Count all ways - sum of all stuffs  
+        - min (of all stuffs) - find min
+        - max (of all stuffs) - find max
